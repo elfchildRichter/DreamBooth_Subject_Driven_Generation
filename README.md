@@ -56,7 +56,6 @@ Subsequently, attempting more precise tuning and adjustments to additional param
 
 
 ### Reference
-- [Hugging Face DreamBooth](https://huggingface.co/docs/diffusers/training/dreambooth)
 - [Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/abs/2208.12242)
 - [Implementation of DreamBooth using KerasCV and TensorFlow](https://github.com/sayakpaul/dreambooth-keras/)
 - [DreamBooth training example](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth)
