@@ -56,10 +56,14 @@ Subsequently, attempting more precise tuning and adjustments to additional param
 
 
 ### Reference
+
 - [Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/abs/2208.12242)
-- [Implementation of DreamBooth using KerasCV and TensorFlow](https://github.com/sayakpaul/dreambooth-keras/)
+- [Training Stable Diffusion with Dreambooth using Diffusers](https://huggingface.co/blog/dreambooth)
+- [Hugging Face DreamBooth](https://huggingface.co/docs/diffusers/training/dreambooth)
+- [Keras/Code examples/DreamBooth](https://keras.io/examples/generative/dreambooth/)
 - [DreamBooth training example](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth)
 - [Fine-tuning Stable Diffusion](https://keras.io/examples/generative/finetune_stable_diffusion/)
+
 
 
 
