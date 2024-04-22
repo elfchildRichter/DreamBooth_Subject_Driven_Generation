@@ -13,10 +13,10 @@ def load_images(image_paths):
     return [np.array(keras.utils.load_img(path)) for path in image_paths]
 
 def plot_images(images, title=None):
-    rows = math.ceil(len(images) / 5) 
-    plt.figure(figsize=(15, rows * 3)) 
+    rows = math.ceil(len(images) / 6) 
+    plt.figure(figsize=(18, rows * 3)) 
     for i in range(len(images)):
-        ax = plt.subplot(rows, 5, i + 1) 
+        ax = plt.subplot(rows, 6, i + 1) 
         if title is not None:
             plt.title(title)
         plt.imshow(images[i])
