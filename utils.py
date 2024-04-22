@@ -13,23 +13,25 @@ def load_images(image_paths):
     return [np.array(keras.utils.load_img(path)) for path in image_paths]
 
 def plot_images(images, title=None):
-    rows = math.ceil(len(images) / 6) 
-    plt.figure(figsize=(18, rows * 3)) 
+    rows = math.ceil(len(images) / 5) 
+    plt.figure(figsize=(15, rows * 3)) 
     for i in range(len(images)):
-        ax = plt.subplot(rows, 6, i + 1) 
+        ax = plt.subplot(rows, 5, i + 1) 
         if title is not None:
             plt.title(title)
         plt.imshow(images[i])
         plt.axis("off")
     plt.tight_layout()
     plt.show()
-
-def generate_and_save_images(save_folder, model, prompt, n_imgs_gen, batch_size=3, steps=None, ugs=None):
+        
+def generate_and_save_images(save_folder, model, prompt, neg_prompt=None, n_imgs_gen=10, batch_size=3, steps=None, ugs=None):
     if not os.path.exists(save_folder):
         os.makedirs(save_folder)
 
     for _ in tqdm(range(n_imgs_gen)):
         kwargs = {'prompt': prompt, 'batch_size': batch_size}
+        if neg_prompt is not None:
+            kwargs['negative_prompt'] = neg_prompt
         if steps is not None:
             kwargs['num_steps'] = steps
         if ugs is not None:
