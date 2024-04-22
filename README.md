@@ -74,7 +74,7 @@ steps=55, ups=13
 
 The model with variance_type set to 'fixed_small_log' or 'learned' performs slightly better than the other two options. 
 
-Setting a negative_prompt can restrict unwanted elements, but it may degrade image quality and instance fidelity. Increasing the complexity of the prompt scene also has this effect. More images: [notebook](https://github.com/elfchildRichter/DreamBooth_Subject_Driven_Generation/blob/main/generated_images.ipynb).
+Setting a negative_prompt can restrict unwanted elements, but it may degrade image quality and instance fidelity. Increasing the complexity of the prompt scene also has this effect.
 
 <br>
 
