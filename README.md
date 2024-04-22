@@ -56,20 +56,6 @@ Subsequently, further adjustments can be attempted on additional parameters and 
 
 <br>
 
-
-### Reference
-
-- [Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/abs/2208.12242)
-- [Training Stable Diffusion with Dreambooth using Diffusers](https://huggingface.co/blog/dreambooth)
-- [Hugging Face DreamBooth](https://huggingface.co/docs/diffusers/training/dreambooth)
-- [Keras | Code examples | DreamBooth](https://keras.io/examples/generative/dreambooth/)
-- [Sayakpaul Dreambooth-Keras](https://github.com/sayakpaul/dreambooth-keras)
-- [DreamBooth training example](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth)
-- [Fine-tuning Stable Diffusion](https://keras.io/examples/generative/finetune_stable_diffusion/)
-
-
-<br><br>
-
 ### **1b - Tune Diffusion Model**
 
 learning_rate=3e-6 <br> 
@@ -117,4 +103,48 @@ After tuning the model along with the text encoder, the quality and diversity of
 Before using negative_prompt, issues such as multiple tails, legs, or incorrectly positioned tails occurred just as before; using negative_prompt improved these situations. As the complexity of the scene increased, sometimes the target becomes less prominent, which is similar to previous models.
 
 The proportion of white cats has increased, improving color fidelity compared to previous models. However, the fidelity of the physical appearance seems to have decreased; the appearances of the cats are not always very similar to the target cat, showing greater variation, but they are all short-haired white cats.
+
+<br>
+
+**Target Cat to Target Dog**
+
+| Prompt | Tune Diffusion Model + Text Encoder |
+|--- |--- |
+| 'a photo of miru dog' | <img src='generated_imgs/img_dog.png' width=500> |
+| 'a miru dog' | <img src='generated_imgs/img_dog_2.png' width=500>|
+| 'a photo of miru dog by the sea' | <img src='generated_imgs/img_dog_sea.png' width=500>|
+| 'a photo of miru dog by the sea <br> with neg_prompt' | <img src='generated_imgs/img_dog_sea_neg.png' width=500>|
+
+<br>
+
+
+**Target Cat to Target Boy**
+
+| Prompt | Tune Diffusion Model + Text Encoder |
+|--- |--- |
+| 'A photo of miru boy' | <img src='generated_imgs/img_boy.png' width=500> |
+| 'A miru boy' | <img src='generated_imgs/img_boy_2.png' width=500>|
+| 'a photo of a miru boy plays the cello' | <img src='generated_imgs/img_boy_cello.png' width=500>|
+
+<br>
+
+
+**Target Cat to Target Man at a Cafe in Cambridge**
+
+| Prompt | Tune Diffusion Model + Text Encoder |
+|--- |--- |
+| 'a photo of a young miru man is having afternoon tea with cake at a café in Cambridge' | <img src='generated_imgs/img_man_cambridge.png' width=650> |
+| 'a photo of a young miru man is having afternoon tea with cake at a café in Cambridge' <br> with neg_prompt| <img src='generated_imgs/img_man_cambridge_neg.png' width=650>|
+
+<br><br>
+
+### Reference
+
+- [Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/abs/2208.12242)
+- [Training Stable Diffusion with Dreambooth using Diffusers](https://huggingface.co/blog/dreambooth)
+- [Hugging Face DreamBooth](https://huggingface.co/docs/diffusers/training/dreambooth)
+- [Keras | Code examples | DreamBooth](https://keras.io/examples/generative/dreambooth/)
+- [Sayakpaul Dreambooth-Keras](https://github.com/sayakpaul/dreambooth-keras)
+- [DreamBooth training example](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth)
+- [Fine-tuning Stable Diffusion](https://keras.io/examples/generative/finetune_stable_diffusion/)
 
